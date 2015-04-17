@@ -6,7 +6,7 @@
   ],
   "description": "A Polymer based Web Component helping you to display a splash screen while your app is getting ready",
   "keywords": [
-    "splash", "polymer", "web-components", "web-component", "web components", "web component"
+    "splash", "polymer", "web-components", "web-component", "web components", "web component", "load", "loading", "wait"
   ],
   "main": "splash-element.html",
   "license": "MIT",
@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "webcomponentsjs": "^0.5",
-	"core-animated-pages": "Polymer/core-animated-pages#^0.5"
+	"core-transition": "Polymer/core-transition#^0.5",
+	"core-meta": "Polymer/core-meta#^0.5"
   }
 }
