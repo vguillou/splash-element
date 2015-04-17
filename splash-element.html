@@ -95,7 +95,7 @@ splash-element or any of it's parents (including the body).
 
 			elementTransition: null,
 			
-			firstTime: true,
+			intialized: false,
 			
 			played: false,
 
@@ -144,7 +144,6 @@ splash-element or any of it's parents (including the body).
 					// play it backwards after ('out' effect for
 					// the splash, 'in' for the element)
 					this.elementTransition.setup(elementContainer);
-					//this.changeDisplay(elementContainer, 'block');
 				}
 				
 				this.addEventListener('core-transitionend', this.end.bind(this));
@@ -180,7 +179,7 @@ splash-element or any of it's parents (including the body).
 				
 				this.async(function() {
 					if (this.splashTransition) {
-						if (this.firstTime) {
+						if (!this.intialized) {
 							this.splashTransition.setup(splashContainer);
 						}
 						this.splashTransition.go(splashContainer, {opened: !forward});
@@ -189,7 +188,7 @@ splash-element or any of it's parents (including the body).
 						this.elementTransition.go(elementContainer, {opened: forward});
 					}
 					this.played = forward;
-					this.firstTime = false;
+					this.intialized = true;
 				}, null, delay);
 			},
 			
