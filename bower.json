@@ -1,0 +1,24 @@
+{
+  "name": "splash-element",
+  "version": "0.5.0",
+  "authors": [
+    "Vincent Guillou <vin.guillou@gmail.com>"
+  ],
+  "description": "A Polymer based Web Component helping you to display a splash screen while your app is getting ready",
+  "keywords": [
+    "splash", "polymer", "web-components", "web-component", "web components", "web component"
+  ],
+  "main": "splash-element.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "^0.5",
+	"core-animated-pages": "Polymer/core-animated-pages#^0.5"
+  }
+}

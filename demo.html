@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>splash-element demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#7986cb">
+
+	<!-- Conditionally load WC polyfills -->
+	<!-- Thanks to https://github.com/geelen/x-gif for the snippet -->
+	<script>
+		if ('registerElement' in document
+			&& 'createShadowRoot' in HTMLElement.prototype
+			&& 'import' in document.createElement('link')
+			&& 'content' in document.createElement('template')) {
+			// We're using a browser with native WC support!
+		} else {
+			document.write('<script src="bower_components/webcomponentsjs/webcomponents.js"><\/script>');
+		}
+	</script>
+
+	<!-- Html imports -->
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="splash-element.html">
+	
+	<style>
+		html, body {
+			font-family: sans-serif;
+		}
+		
+		div[id*='demo'] {
+			float: left;
+			width: 400px;
+			height: 400px;
+			margin: 20px;
+		}
+		
+		.splash {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-size: 224px;
+			background-image: url(res/logo.svg);
+			background-color: #eee;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Necessary dummy element - Don't mind this -->
+	<polymer-element name="my-element" noscript>
+		<template>
+			<style>
+				:host {
+					display: block;
+					background-color: #7986cb;
+					text-align: center;
+					vertical-align: middle;
+					line-height: 400px;
+				}
+			</style>
+			my-element is loaded
+		</template>
+	</polymer-element>
+	
+	<!-- Actual demo -->
+	<div id="demo1">
+		<div class="splash"></div>
+		<splash-element transition="slide-from-bottom" fit>
+			<div class="splash"></div>
+			<my-element id="element" fit></my-element>
+		</splash-element>
+	</div>
+	
+	<div id="demo2">
+		<div class="splash"></div>
+		<splash-element transition="slide-from-bottom" fit>
+			<div class="splash"></div>
+			<my-element id="element" fit></my-element>
+		</splash-element>
+	</div>
+	
+	<div id="demo3">
+		<div class="splash"></div>
+		<splash-element transition="slide-from-bottom" fit>
+			<div class="splash"></div>
+			<my-element id="element" fit></my-element>
+		</splash-element>
+	</div>
+</body>
+</html>
