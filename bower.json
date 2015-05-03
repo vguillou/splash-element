@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "webcomponentsjs": "^0.5",
-	"core-transition": "Polymer/core-transition#^0.5",
-	"core-meta": "Polymer/core-meta#^0.5"
+    "core-transition": "Polymer/core-transition#^0.5",
+    "core-meta": "Polymer/core-meta#^0.5"
   }
 }
