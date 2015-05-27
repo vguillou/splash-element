@@ -50,6 +50,7 @@ Learn more : https://github.com/vguillou/splash-element
 		</div>
 	</template>
 	<script>
+	(function () {
 		Polymer('splash-element', {
 			publish: {
 				/**
@@ -223,5 +224,6 @@ Learn more : https://github.com/vguillou/splash-element
 					target.style.display = newValue ? newValue : '';
 			}
 		});
+	})();
 	</script>
 </polymer-element>
