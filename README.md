@@ -2,6 +2,7 @@
 
 _A Polymer based Web-Component helping you to display a splash screen while your own Web-Component is getting ready._
 
+_**This Polymer element is compatible with Polymer 0.5.X, not 0.8+.**_
 
 ## What can you do with it ?
 
